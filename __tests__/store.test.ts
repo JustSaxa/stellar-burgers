@@ -1,4 +1,4 @@
-import store, { RootState } from '../src/services/store'; // Импортируйте ваш store
+import store, { RootState } from '../src/services/store';
 import { userSlice } from '../src/services/slices/userSlice';
 import { ingredientsSlice } from '../src/services/slices/ingredientsSlice';
 import { constructorSlice } from '../src/services/slices/constructorSlice';

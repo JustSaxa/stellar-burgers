@@ -1,8 +1,8 @@
-// __tests__/ingredientsSlice.test.ts
 import { configureStore } from '@reduxjs/toolkit';
 import {
   ingredientsSlice,
-  fetchIngredients
+  fetchIngredients,
+  initialState
 } from '../src/services/slices/ingredientsSlice';
 import { TIngredient } from '../src/utils/types';
 import { getIngredientsApi } from '../src/utils/burger-api';
@@ -10,7 +10,6 @@ import { getIngredientsApi } from '../src/utils/burger-api';
 jest.mock('../src/utils/burger-api', () => ({ getIngredientsApi: jest.fn() }));
 
 describe('ingredientsSlice', () => {
-  const initialState = { ingredients: [], isLoading: false, error: undefined };
   const mockIngredients: TIngredient[] = [
     {
       _id: '643d69a5c3f7b9001cfa093c',

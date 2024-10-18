@@ -5,7 +5,8 @@ import {
   getOrders,
   getOrderByNum,
   postOrder,
-  resetOrder
+  resetOrder,
+  initialState
 } from '../src/services/slices/orderSlice';
 import {
   getFeedsApi,
@@ -23,18 +24,6 @@ jest.mock('../src/utils/burger-api', () => ({
 }));
 
 describe('orderSlice', () => {
-  const initialState = {
-    order: null,
-    name: null,
-    error: null,
-    isLoading: false,
-    orders: [],
-    orderModal: [],
-    profileOrders: [],
-    total: null,
-    totalToday: null
-  };
-
   const mockOrders: TOrder[] = [
     {
       _id: 'order1',

@@ -6,9 +6,10 @@ import {
   loginUser,
   logoutUser,
   updateUser,
-  TUserState
+  TUserState,
+  initialState
 } from '../src/services/slices/userSlice';
-import { TUser } from '../src/utils/types'; // Импортируем типы
+import { TUser } from '../src/utils/types';
 
 const testUser: TUser = {
   name: 'Test User',
@@ -16,12 +17,6 @@ const testUser: TUser = {
 };
 
 describe('authSlice', () => {
-  const initialState: TUserState = {
-    user: null,
-    isAuthChecked: false,
-    error: null
-  };
-
   it('вернуть начальное состояние', () => {
     expect(userSlice.reducer(undefined, { type: 'undefined' })).toEqual(
       initialState

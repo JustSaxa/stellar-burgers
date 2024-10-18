@@ -28,7 +28,7 @@ interface IOrderState {
   totalToday: number | null;
 }
 
-const initialState: IOrderState = {
+export const initialState: IOrderState = {
   order: null,
   name: null,
   error: null,

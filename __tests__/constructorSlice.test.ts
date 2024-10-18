@@ -3,13 +3,12 @@ import {
   addIngredient,
   removeIngredients,
   resetIngredients,
-  moveIngredient
+  moveIngredient,
+  initialState
 } from '../src/services/slices/constructorSlice';
 import { TConstructorIngredient } from '../src/utils/types';
 
 describe('constructorSlice', () => {
-  const initialState = { bun: null, ingredients: [] };
-
   const ingredientsMock: Record<string, TConstructorIngredient> = {
     bun: {
       id: '1',
